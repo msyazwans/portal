@@ -13,3 +13,7 @@ git config --global user.name "msyazwans"
 git stash
 php artisan cache:clear
 php artisan config:clear
+
+git add .
+git commit -m "latest"
+git push -u msyazwans master
