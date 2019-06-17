@@ -4,8 +4,8 @@
     <div id="page-wrapper">
         <div class="row">
 
-            <form class="new_slider" id="new_slider" enctype="multipart/form-data"
-                  action="/slider/new" accept-charset="UTF-8" method="post">
+            <form class="new_announcement" id="new_announcement" enctype="multipart/form-data"
+                  action="/announcement/new" accept-charset="UTF-8" method="post">
 {{ csrf_field() }}
 
                 <div class="col-lg-12">
@@ -26,7 +26,7 @@
                                         <br>Save
                                     </li>
                                     <li>
-                                        <a href="/slider/list" class="btn-cancel"><i
+                                        <a href="/announcement/list" class="btn-cancel"><i
                                                     class="fa fa-minus-circle"></i></a><br>Cancel
                                     </li>
                                 </ul>
@@ -48,14 +48,19 @@
                                 <label for="slider_background">Background</label>
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
-                                        <input class="form-control" type="file" name="slider_background"
-                                               id="slider_background" value="{{ old('slider_background') }}"/>
+                                        <input class="form-control" type="file" name="announcement_background"
+                                               id="announcement_background" value="{{ old('announcement_background') }}"/>
                                     </div><!-- panel-heading close -->
                                 </div><!-- panel close -->
                             </div>
 
                             <div class="form-group ">
-                                <label for="slider_caption">Caption</label>
+                                <label for="announcement_title">Title</label>
+                                <textarea class="form-control" name="title" id="title">{{ old('title') }}
+                                </textarea>
+                            </div>
+                            <div class="form-group ">
+                                <label for="announcement_caption">Caption</label>
                                 <textarea class="form-control" name="caption" id="caption">{{ old('caption') }}
                                 </textarea>
                             </div>
@@ -72,7 +77,7 @@
                         <div class="panel-body">
 
                             <div class="form-group">
-                                <label for="slider_status">Status</label>
+                                <label for="announcement_status">Status</label>
                                 <select class="form-control" name="status" id="status">
                                     <option  selected="selected"  value="0" @if(old('status') == "0") selected @endif>Draft</option>
                                     <option  value="1" @if(old('status') == "1") selected @endif>Published</option>

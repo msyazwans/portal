@@ -32,6 +32,14 @@ Route::group(['middleware' => ['role:super']], function () {
     Route::get('/slider/{slider_id}/destroy','SliderController@destroy');
     Route::get('/slider/{slider_id}/remove_photo','SliderController@remove_photo');
 
+    Route::get('/announcement/list','AnnouncementController@index');
+    Route::get('/announcement/new','AnnouncementController@create');
+    Route::post('/announcement/new','AnnouncementController@store');
+    Route::get('/announcement/{announcement_id}/edit','AnnouncementController@edit');
+    Route::post('/announcement/{announcement_id}/edit','AnnouncementController@update');
+    Route::get('/announcement/{announcement_id}/destroy','AnnouncementController@destroy');
+    Route::get('/announcement/{announcement_id}/remove_photo','AnnouncementController@remove_photo');
+
 });
 
 

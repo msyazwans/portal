@@ -8,7 +8,7 @@
                 <a href="/slider/list"> Sliders</a>
             </li>
             <li>
-                <a href="index.html"> Announcements</a>
+                <a href="/announcement/list"> Announcements</a>
             </li>
             <li>
                 <a href="index.html"> Articles</a>
