@@ -21,6 +21,25 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/slider/list','SliderController@index');
-Route::get('/slider/new','SliderController@create');
-Route::post('/slider/new','SliderController@store');
+
+Route::group(['middleware' => ['role:super']], function () {
+
+    Route::get('/slider/list','SliderController@index');
+    Route::get('/slider/new','SliderController@create');
+    Route::post('/slider/new','SliderController@store');
+    Route::get('/slider/{slider_id}/edit','SliderController@edit');
+    Route::post('/slider/{slider_id}/edit','SliderController@update');
+    Route::get('/slider/{slider_id}/destroy','SliderController@destroy');
+    Route::get('/slider/{slider_id}/remove_photo','SliderController@remove_photo');
+
+});
+
+
+
+
+
+
+
+
+
+

@@ -20,6 +20,9 @@
                         </div><!-- col-md-6 close -->
                     </div><!-- row close -->
                 </div><!-- page-header close -->
+
+                @include('partial.notification')
+
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         Sliders List
@@ -60,11 +63,11 @@
                                         </span>
                                 </td>
                                 <td>
-                                    @if($slider->status == 1)
+                                    @if($slider->status == 0)
                                     Draft
-                                    @elseif($slider->status == 2)
+                                    @elseif($slider->status == 1)
                                         Published
-                                    @elseif($slider->status == 3)
+                                    @elseif($slider->status == 2)
                                         Archived
                                     @endif
                                 </td>
@@ -74,7 +77,7 @@
                                     </a>
                                     <a data-confirm="Are you sure?" class="btn btn-danger btn-circle delete "
                                        title="Delete" rel="nofollow" data-method="delete"
-                                       href="/sliders/{{ $slider->id }}/destroy"><i
+                                       href="/slider/{{ $slider->id }}/destroy"><i
                                                 class="fa fa-trash-o"></i></a>
                                 </td>
                             </tr>

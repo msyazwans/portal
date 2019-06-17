@@ -10,6 +10,7 @@
                 {{ csrf_field() }}
                 <div class="col-lg-12">
 
+
                     <div class="page-header">
                         <div class="row">
                             <div class="col-md-6">
@@ -36,6 +37,8 @@
 
                 </div>
 
+                @include('partial.notification')
+
                 <div class="col-md-8">
                     <div class="panel panel-info">
                         <div class="panel-heading">
@@ -51,10 +54,10 @@
                                         <input class="form-control" type="file" name="slider_background"
                                                id="slider_background"/>
                                     </div><!-- panel-heading close -->
-                                    @if (isset($slider->background_file_name) && !empty($slider->background_file_name))
+                                    @if (isset($slider->featured_file_name) && !empty($slider->featured_file_name))
                                         <div class="panel-body">
                                             <div class="photo_wrap">
-                                                <img src="/system/slider/medium/{{ $slider->background_file_name }}?1506548053"
+                                                <img src="/system/slider/{{ $slider->id }}/medium/{{ $slider->featured_file_name }}?1506548053"
                                                      alt="">
                                             </div><!-- photo_wrap close -->
                                         </div><!-- panel-body close -->
@@ -70,7 +73,8 @@
                             <div class="form-group ">
                                 <label for="slider_caption">Caption</label>
                                 <textarea class="form-control" name="caption" id="caption">
-{{ $slider->caption }}</textarea>
+                                    {{ $slider->caption }}
+                                </textarea>
                             </div>
 
                         </div><!-- panel-body close -->
@@ -84,7 +88,7 @@
                         </div>
                         <div class="panel-body">
 
-                            @if(Auth::user()->role == 'super'  || Auth::user()->role == 'content')
+                            @if(Auth::user()->role == 'super'  || Auth::user()->role == 'admin')
                                 <div class="form-group">
                                     <label for="slider_status">Status</label>
                                     <select class="form-control" name="status" id="status">
@@ -100,7 +104,9 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class='input-group date' id='datetimepicker1'>
-                                            <input type='text' class="form-control" name="start_publishing" value="@if (!empty(old('start_publishing',$slider->start_publishing))){{ old('start_publishing',\Carbon\Carbon::parse($slider->start_publishing)->format('d-m-Y')) }}@endif" />
+                                            <input type='text' class="form-control" name="start_publishing"
+value="@if(!empty(old('start_publishing',$slider->start_publishing)))
+{{ old('start_publishing',\Carbon\Carbon::parse($slider->start_publishing)->format('d-m-Y')) }}@endif" />
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-calendar"></span>
                                                 </span>
@@ -121,7 +127,8 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class='input-group date' id='datetimepicker2'>
-                                            <input type='text' class="form-control" name="stop_publishing" value="@if (!empty(old('stop_publishing',$slider->stop_publishing))){{ old('stop_publishing',\Carbon\Carbon::parse($slider->stop_publishing)->format('d-m-Y')) }}@endif" />
+                                            <input type='text' class="form-control" name="stop_publishing"
+                                                   value="@if (!empty(old('stop_publishing',$slider->stop_publishing))){{ old('stop_publishing',\Carbon\Carbon::parse($slider->stop_publishing)->format('d-m-Y')) }}@endif" />
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-calendar"></span>
                                                 </span>
