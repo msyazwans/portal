@@ -1,99 +1,325 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="en-US" class="css3transitions">
+<!-- Start Header -->
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta charset="UTF-8" />
+    <title>.:: Portal ::.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-        <title>Laravel</title>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <!-- FONT  BLOCK -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,600,300italic' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,600,700,300italic' rel='stylesheet' type='text/css' />
+    <!-- FONT BLOCK -->
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+    <!-- CSS BLOCK -->
+    <link rel='stylesheet' id='layerslider_css-css'  href='/content/plugins/LayerSlider/css/layerslider.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='rs-settings-css'  href='/content/plugins/revslider/rs-plugin/css/settings.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='rs-captions-css'  href='/content/plugins/revslider/rs-plugin/css/captions.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='style-css'  href='/content/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='bootstrap-responsive-css'  href='/content/css/bootstrap-responsive.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='mediaelementplayer-css'  href='/content/css/mediaelementplayer.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='jquery.fancybox-css'  href='/content/fancybox/source/jquery.fancybox.css?v=2.1.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='hoverex-css'  href='/content/css/hoverex-all.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='vector-icons-css'  href='/content/css/vector-icons.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='jquery.easy-pie-chart-css'  href='/content/css/jquery.easy-pie-chart.css' type='text/css' media='all' />
+    <!-- CSS BLOCK -->
 
-            .full-height {
-                height: 100vh;
-            }
+    <!-- JAVASCRIPTS -->
+    <script type='text/javascript' src='/includes/js/jquery/jquery.js?ver=1.10.2'></script>
+    <script type='text/javascript' src='/includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+    <script type='text/javascript' src='/content/plugins/LayerSlider/js/layerslider.kreaturamedia.jquery.js?ver=4.0.1'></script>
+    <script type='text/javascript' src='/content/plugins/LayerSlider/js/jquery-easing-1.3.js?ver=1.3.0'></script>
+    <script type='text/javascript' src='/content/plugins/LayerSlider/js/jquerytransit.js?ver=0.9.9'></script>
+    <script type='text/javascript' src='/content/plugins/LayerSlider/js/layerslider.transitions.js?ver=4.0.1'></script>
+    <script type='text/javascript' src='/content/plugins/revslider/rs-plugin/js/jquery.themepunch.revolution.min.js'></script>
+    <script type='text/javascript' src='/content/js/jquery.easy-pie-chart.js?ver=1'></script>
+    <script type='text/javascript' src='/content/js/jquery.appear-1.1.1.modified.js?ver=1'></script>
+    <script type='text/javascript' src='/content/js/modernizr.custom.66803.js?ver=1'></script>
+    <script type='text/javascript' src='/content/js/animations.js?ver=1'></script>
+    <script type='text/javascript' src='/content/js/jquery.countdown.min.js?ver=1'></script>
+    <script type='text/javascript' src='/content/js/waypoints.min.js?ver=1'></script>
+    <script type='text/javascript' src='/content/js/bootstrap.min.js?ver=1'></script>
+    <script type='text/javascript' src='/content/js/jquery.easing.1.1.js?ver=1'></script>
+    <script type='text/javascript' src='/content/js/jquery.easing.1.3.js?ver=1'></script>
+    <script type='text/javascript' src='/content/js/jquery.mobilemenu.js?ver=1'></script>
+    <script type='text/javascript' src='/content/js/isotope.js?ver=1'></script>
+    <script type='text/javascript' src='/content/js/jquery.cycle.all.js?ver=1'></script>
+    <script type='text/javascript' src='/content/js/customSelect.jquery.min.js?ver=1'></script>
+    <script type='text/javascript' src='/content/js/jquery.flexslider-min.js?ver=1'></script>
+    <script type='text/javascript' src='/content/fancybox/source/jquery.fancybox.js?ver=1'></script>
+    <script type='text/javascript' src='/content/fancybox/source/helpers/jquery.fancybox-media.js?ver=1'></script>
+    <script type='text/javascript' src='/content/js/jquery.carouFredSel-6.1.0-packed.js?ver=1'></script>
+    <script type='text/javascript' src='/content/js/mediaelement-and-player.min.js?ver=1'></script>
+    <script type='text/javascript' src='/content/js/tooltip.js?ver=1'></script>
+    <script type='text/javascript' src='/content/js/jquery.hoverex.js?ver=1'></script>
+    <script type='text/javascript' src='/content/js/jquery.imagesloaded.min.js?ver=1'></script>
+    <script type='text/javascript' src='/content/js/main.js?ver=1'></script>
+    <script type='text/javascript' src='/content/js/jquery.placeholder.min.js?ver=1'></script>
+    <script type='text/javascript' src='/content/js/jquery.livequery.js?ver=1'></script>
+    <!-- JAVASCRIPTS -->
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+    <style type="text/css" media="screen">
+        .qtrans_flag span { display:none }
+        .qtrans_flag { height:12px; width:18px; display:block }
+        .qtrans_flag_and_text { padding-left:20px }
+        .qtrans_flag_de { background:url('content/plugins/qtranslate/flags/de.png') no-repeat }
+        .qtrans_flag_en { background:url('content/plugins/qtranslate/flags/gb.png') no-repeat }
+        .qtrans_flag_zh { background:url('content/plugins/qtranslate/flags/cn.png') no-repeat }
+    </style>
+</head>
+<!-- End Header -->
+<body  class="home blog header_2 fullwidth_slider">
 
-            .position-ref {
-                position: relative;
-            }
+<div class="top_nav">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span6">
+                <div class="pull-left">
+                    <div id="widget_topnav-2" class="widget widget_topnav"><div class="search small_widget"><a href="#" class="getdata" data-box="search"><i class="moon-search-3"></i>Search</a><div class="top_nav_sub search"><form action="#" id="search-form">
+                                    <div class="input-append">
+                                        <input type="text" size="16" placeholder="Search…" name="s" id="s"><button type="submit" class="more">Search</button>
+                                    </div>
+                                </form></div></div>
+                                <div class="login small_widget"><a href="#" data-box="login"><i class="moon-user"></i>Login</a><div class="top_nav_sub login">               <div class="sub-loggin">
+                                    <form action="{{ route('login') }}" method="post">
+                                        {{ csrf_field() }}
+                                        <input type="text" name="email" id="email" value="" size="20" placeholder="E-mail">
+                                        <input type="password" name="password" id="password" size="20" placeholder="Password">
+                                        <input type="submit" name="submit" value="Send" class="button">
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+                                        <div class="check-login">
+                                            <label for="rememberme"><input name="rememberme" id="rememberme" type="checkbox" checked="checked" value="forever"> Remember me</label>
+                                        </div>
+                                        <input type="hidden" name="redirect_to" value="/">
 
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                                    </form>
+                                    <a href="wp-loginc2b6.html?action=lostpassword">Recover password</a> </div></div></div>
+                                    <!--div class="multilanguage small_widget"-->
+                                    <!--div class="small_widget">
+                                        <a href="{{ route('register') }}" data-box="multilanguage"><i class="moon-flag"></i>Register</a>
+                                        <div class="top_nav_sub multilanguage aaaa">
+                                            <ul class="qtrans_language_chooser" id="qtranslate-chooser">
+                                                <li class="lang-de"><a href="index3322.html?lang=de" hreflang="de" title="Deutsch" class="qtrans_flag qtrans_flag_de"><span style="display:none">Deutsch</span></a></li>
+                                                <li class="lang-en active"><a href="index.html" hreflang="en" title="English" class="qtrans_flag qtrans_flag_en"><span style="display:none">English</span></a></li>
+                                                <li class="lang-zh"><a href="index3454.html?lang=zh" hreflang="zh" title="中文" class="qtrans_flag qtrans_flag_zh"><span style="display:none">中文</span></a></li>
+                                            </ul>
+                                            <div class="qtrans_widget_end"></div>
+                                        </div>
+                                    </div-->
+                    </div><div id="text-5" class="widget widget_text">			<div class="textwidget">Contact us now:   Phone: +3556969696</div>
+                    </div>                    </div>
+            </div>
+            <div class="span6">
+                <div class="pull-right">
+                    <div id="social_widget-2" class="widget social_widget"><div class="row-fluid social_row"><div class="span12"><ul class="footer_social_icons"><li class="register"><a href="{{ route('register') }}"><span></span></a></li><li class="flickr"><a href="#"><span></span></a></li><li class="youtube"><a href="#"><span></span></a></li><li class="yahoo"><a href="#"><span></span></a></li><li class="twitter"><a href="#"><span></span></a></li><li class="facebook"><a href="#"><span></span></a></li></ul></div></div></div>    </div>
             </div>
         </div>
-    </body>
+    </div>
+</div>
+
+<!-- Header -->
+<div id="page-bg"></div>
+<header id="header" class="header_2">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span12">
+                <!-- Logo -->
+                <div id="logo" class="">
+                    <a href='index.html'><img alt="img" src=content/images/all/07/maximus-logo1.png  /></a>		                    <span class="logo_desc"></span>
+                </div><!-- #logo -->
+                <div id="navigation" class="nav_top pull-right  ">
+                    <!-- Menu Section -->
+                    <nav>
+                        <ul id="menu-menu" class="menu">
+                            <li class="current-menu-item current_page_item">
+                                <a href="/">Home</a>
+                            </li>
+                            <li class="current-menu-item current_page_item">
+                                <a href="/announcement/list">Announcements</a>
+                            </li>
+                            <li class="current-menu-item current_page_item">
+                                <a href="/article/list">Articles</a>
+                            </li>
+                            <li class="current-menu-item current_page_item">
+                                <a href="/service/list">Services</a>
+                            </li>
+                            <li class="current-menu-item current_page_item">
+                                <a href="/link/list">Links</a>
+                            </li>
+                            {{--<li class="current-menu-item current_page_item"><a href="index.html">Home</a>--}}
+                                {{--<ul class="sub-menu">--}}
+                                    {{--<li><a href="homenew.html">Home New</a></li>--}}
+                                    {{--<li><a href="home2.html">Homepage 2</a></li>--}}
+                                    {{--<li><a href="home3.html">Homepage 3</a></li>--}}
+                                {{--</ul>--}}
+                            {{--</li>--}}
+                            {{--<li><a href="#">Sliders</a>--}}
+                                {{--<ul class="sub-menu">--}}
+                                    {{--<li><a href="layer_full.html">LayerSlider  Fullwidth</a></li>--}}
+                                    {{--<li><a href="layer_boxed.html">LayerSlider Boxed</a></li>--}}
+                                    {{--<li><a href="layer_video.html">LayerSlider Video</a></li>--}}
+                                    {{--<li><a href="rev_slider.html">Revolution Slider</a></li>--}}
+                                    {{--<li><a href="flex_animation.html">FlexSlider Animations</a></li>--}}
+                                    {{--<li><a href="flex_boxed.html">Flexislider Boxed</a></li>--}}
+                                {{--</ul>--}}
+                            {{--</li>--}}
+                            {{--<li><a href="#">Pages</a>--}}
+                                {{--<ul class="sub-menu">--}}
+                                    {{--<li><a href="about_us.html">About Us</a></li>--}}
+                                    {{--<li><a href="about_us_2.html">About Us 2</a></li>--}}
+                                    {{--<li><a href="services.html">Services</a></li>--}}
+                                    {{--<li><a href="services_2.html">Services 2</a></li>--}}
+                                    {{--<li><a href="team.html">Meet The Team</a></li>--}}
+                                    {{--<li><a href="faq.html">FAQ</a></li>--}}
+                                    {{--<li><a href="price_table.html">Pricing Tables</a></li>--}}
+                                    {{--<li><a href="fullwidth.html">Page Fullwidth</a></li>--}}
+                                    {{--<li><a href="right_sidebar.html">Page Right SIdebar</a></li>--}}
+                                    {{--<li><a href="left_sidebar.html">Page Left Sidebar</a></li>--}}
+                                {{--</ul>--}}
+                            {{--</li>--}}
+                            {{--<li><a href="portfolio.html">Portfolio</a>--}}
+                                {{--<ul class="sub-menu">--}}
+                                    {{--<li><a href="portfolio_2.html">Portfolio 2 Columns</a></li>--}}
+                                    {{--<li><a href="portfolio_3.html">Portfolio 3 Columns</a></li>--}}
+                                    {{--<li><a href="portfolio.html">Portfolio 4 Columns</a></li>--}}
+                                    {{--<li><a href="portfolio_alt_2.html">Portfolio Alt. 2 Columns</a></li>--}}
+                                    {{--<li><a href="portfolio_alt_3.html">Portfolio Alt. 3 Columns</a></li>--}}
+                                    {{--<li><a href="portfolio_alt_4.html">Portfolio Alt. 4 Columns</a></li>--}}
+                                {{--</ul>--}}
+                            {{--</li>--}}
+                            {{--<li>--}}
+                                {{--<a href="blog.html">Blog</a>--}}
+                            {{--</li>--}}
+                            {{--<li ><a href="#">Shortcodes</a>--}}
+                                {{--<ul class="sub-menu">--}}
+                                    {{--<li><a href="alert.html">Alert Box</a></li>--}}
+                                    {{--<li><a href="buttons.html">Buttons</a></li>--}}
+                                    {{--<li><a href="dropcaps.html">DropCaps</a></li>--}}
+                                    {{--<li><a href="headings.html">Headings</a></li>--}}
+                                    {{--<li><a href="highlights.html">Highlights</a></li>--}}
+                                    {{--<li><a href="lists.html">Lists</a></li>--}}
+                                    {{--<li><a href="tabs_toogles.html">Tabs &#038; Toogles</a></li>--}}
+                                    {{--<li><a href="quote.html">Quote</a></li>--}}
+                                    {{--<li><a href="table.html">Table</a></li>--}}
+                                    {{--<li><a href="text.html">Text Columns</a></li>--}}
+                                    {{--<li><a href="tooltip.html">Tooltip</a></li>--}}
+                                {{--</ul>--}}
+                            {{--</li>--}}
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div><!-- End Menu #navigation -->
+            </div>
+        </div>
+    </div>
+    <span class="shadow"></span>
+</header>
+
+</body>
 </html>
+
+{{--<!doctype html>--}}
+{{--<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">--}}
+    {{--<head>--}}
+        {{--<meta charset="utf-8">--}}
+        {{--<meta name="viewport" content="width=device-width, initial-scale=1">--}}
+
+        {{--<title>Laravel</title>--}}
+
+        {{--<!-- Fonts -->--}}
+        {{--<link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">--}}
+
+        {{--<!-- Styles -->--}}
+        {{--<style>--}}
+            {{--html, body {--}}
+                {{--background-color: #fff;--}}
+                {{--color: #636b6f;--}}
+                {{--font-family: 'Nunito', sans-serif;--}}
+                {{--font-weight: 200;--}}
+                {{--height: 100vh;--}}
+                {{--margin: 0;--}}
+            {{--}--}}
+
+            {{--.full-height {--}}
+                {{--height: 100vh;--}}
+            {{--}--}}
+
+            {{--.flex-center {--}}
+                {{--align-items: center;--}}
+                {{--display: flex;--}}
+                {{--justify-content: center;--}}
+            {{--}--}}
+
+            {{--.position-ref {--}}
+                {{--position: relative;--}}
+            {{--}--}}
+
+            {{--.top-right {--}}
+                {{--position: absolute;--}}
+                {{--right: 10px;--}}
+                {{--top: 18px;--}}
+            {{--}--}}
+
+            {{--.content {--}}
+                {{--text-align: center;--}}
+            {{--}--}}
+
+            {{--.title {--}}
+                {{--font-size: 84px;--}}
+            {{--}--}}
+
+            {{--.links > a {--}}
+                {{--color: #636b6f;--}}
+                {{--padding: 0 25px;--}}
+                {{--font-size: 13px;--}}
+                {{--font-weight: 600;--}}
+                {{--letter-spacing: .1rem;--}}
+                {{--text-decoration: none;--}}
+                {{--text-transform: uppercase;--}}
+            {{--}--}}
+
+            {{--.m-b-md {--}}
+                {{--margin-bottom: 30px;--}}
+            {{--}--}}
+        {{--</style>--}}
+    {{--</head>--}}
+    {{--<body>--}}
+        {{--<div class="flex-center position-ref full-height">--}}
+            {{--@if (Route::has('login'))--}}
+                {{--<div class="top-right links">--}}
+                    {{--@auth--}}
+                        {{--<a href="{{ url('/home') }}">Home</a>--}}
+                    {{--@else--}}
+                        {{--<a href="{{ route('login') }}">Login</a>--}}
+
+                        {{--@if (Route::has('register'))--}}
+                            {{--<a href="{{ route('register') }}">Register</a>--}}
+                        {{--@endif--}}
+                    {{--@endauth--}}
+                {{--</div>--}}
+            {{--@endif--}}
+
+            {{--<div class="content">--}}
+                {{--<div class="title m-b-md">--}}
+                    {{--Laravel--}}
+                {{--</div>--}}
+
+                {{--<div class="links">--}}
+                    {{--<a href="https://laravel.com/docs">Docs</a>--}}
+                    {{--<a href="https://laracasts.com">Laracasts</a>--}}
+                    {{--<a href="https://laravel-news.com">News</a>--}}
+                    {{--<a href="https://blog.laravel.com">Blog</a>--}}
+                    {{--<a href="https://nova.laravel.com">Nova</a>--}}
+                    {{--<a href="https://forge.laravel.com">Forge</a>--}}
+                    {{--<a href="https://github.com/laravel/laravel">GitHub</a>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</body>--}}
+{{--</html>--}}

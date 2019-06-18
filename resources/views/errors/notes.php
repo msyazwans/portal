@@ -21,3 +21,14 @@ php artisan vendor:publish
 git add .
 git commit -m "latest"
 git push -u msyazwans master
+
+<div class="pull-left">
+    @auth
+        <a href="">Home</a>
+    @else
+        <a href="">login</a>
+        @if (Route::has('register'))
+            <a href="">Register</a>
+        @endif
+    @endauth
+</div>

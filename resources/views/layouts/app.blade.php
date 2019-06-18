@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>.:: Portal ::.</title>
 
     <link href="/dist/css/bootstrap-timepicker.min.css" rel="stylesheet" data-turbolinks-track="true" />
 
