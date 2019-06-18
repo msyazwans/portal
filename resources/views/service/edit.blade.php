@@ -4,8 +4,8 @@
     <div id="page-wrapper">
         <div class="row">
 
-            <form class="edit_article" id="edit_slider_8" enctype="multipart/form-data"
-                  action="/article/{{ $article->id }}/edit"
+            <form class="edit_service" id="edit_service_8" enctype="multipart/form-data"
+                  action="/service/{{ $service->id }}/edit"
                   accept-charset="UTF-8" method="post">
                 {{ csrf_field() }}
                 <div class="col-lg-12">
@@ -15,7 +15,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <h1>
-                                    Article
+                                    Service
                                 </h1>
                             </div><!-- col-md-6 close -->
                             <div class="col-md-6 text-right">
@@ -27,7 +27,7 @@
                                         <br>Save
                                     </li>
                                     <li>
-                                        <a href="/article/list"
+                                        <a href="/service/list"
                                            class="btn-cancel"><i class="fa fa-minus-circle"></i></a><br>Cancel
                                     </li>
                                 </ul>
@@ -51,19 +51,19 @@
                                 <label for="announcement_background">Background</label>
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
-                                        <input class="form-control" type="file" name="article_background"
-                                               id="article_background"/>
+                                        <input class="form-control" type="file" name="service_background"
+                                               id="service_background"/>
                                     </div><!-- panel-heading close -->
-                                    @if (isset($article->logo_file_name) && !empty($article->logo_file_name))
+                                    @if (isset($service->featured_file_name) && !empty($service->featured_file_name))
                                         <div class="panel-body">
                                             <div class="photo_wrap">
-                                                <img src="/system/article/{{ $article->id }}/medium/{{ $article->logo_file_name }}?1506548053"
+                                                <img src="/system/service/{{ $service->id }}/medium/{{ $service->featured_file_name }}?1506548053"
                                                      alt="">
                                             </div><!-- photo_wrap close -->
                                         </div><!-- panel-body close -->
                                         <div class="panel-footer">
                                             <a class="btn btn-default"
-                                               href="/article/{{ $article->id }}/remove_photo">Remove
+                                               href="/service/{{ $service->id }}/remove_photo">Remove
                                                 Featured Photo</a>
                                         </div><!-- panel-footer close -->
                                     @endif
@@ -71,13 +71,17 @@
                             </div>
 
                             <div class="form-group ">
-                                <label for="article_title">Title</label>
-                                <textarea class="form-control" name="title" id="title">{{ $article->title }}</textarea>
+                                <label for="service_title">Title</label>
+                                <textarea class="form-control" name="title" id="title">{{ $service->title }}</textarea>
+                            </div>
+                            <div class="form-group ">
+                                <label for="service_url">Url</label>
+                                <textarea class="form-control" name="url" id="url">{{ $service->url }}</textarea>
                             </div>
 
                             <div class="form-group ">
-                                <label for="article_notes">Notes</label>
-                                <textarea class="form-control" name="notes" id="notes">{{ $article->notes }}</textarea>
+                                <label for="service_notes">Notes</label>
+                                <textarea class="form-control" name="notes" id="notes">{{ $service->notes }}</textarea>
                             </div>
                             <script>
                                 var options = {
@@ -106,11 +110,11 @@
 
                             @if(Auth::user()->role == 'super'  || Auth::user()->role == 'admin')
                                 <div class="form-group">
-                                    <label for="article_status">Status</label>
+                                    <label for="service_status">Status</label>
                                     <select class="form-control" name="status" id="status">
-                                        <option @if(old('status',$article->status) == 0) selected="selected" @endif value="0">Draft</option>
-                                        <option @if(old('status',$article->status) == 1) selected="selected" @endif value="1">Published</option>
-                                        <option @if(old('status',$article->status) == 2) selected="selected" @endif value="2">Archived</option>
+                                        <option @if(old('status',$service->status) == 0) selected="selected" @endif value="0">Draft</option>
+                                        <option @if(old('status',$service->status) == 1) selected="selected" @endif value="1">Published</option>
+                                        <option @if(old('status',$service->status) == 2) selected="selected" @endif value="2">Archived</option>
                                     </select>
                                 </div>
                             @endif
@@ -121,8 +125,8 @@
                                     <div class="col-md-12">
                                         <div class='input-group date' id='datetimepicker1'>
                                             <input type='text' class="form-control" name="start_publishing"
-value="@if(!empty(old('start_publishing',$article->start_publishing)))
-{{ old('start_publishing',\Carbon\Carbon::parse($article->start_publishing)->format('d-m-Y')) }}@endif" />
+value="@if(!empty(old('start_publishing',$service->start_publishing)))
+{{ old('start_publishing',\Carbon\Carbon::parse($service->start_publishing)->format('d-m-Y')) }}@endif" />
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-calendar"></span>
                                                 </span>
@@ -144,7 +148,7 @@ value="@if(!empty(old('start_publishing',$article->start_publishing)))
                                     <div class="col-md-12">
                                         <div class='input-group date' id='datetimepicker2'>
                                             <input type='text' class="form-control" name="stop_publishing"
-                                                   value="@if (!empty(old('stop_publishing',$article->stop_publishing))){{ old('stop_publishing',\Carbon\Carbon::parse($article->stop_publishing)->format('d-m-Y')) }}@endif" />
+                                                   value="@if (!empty(old('stop_publishing',$service->stop_publishing))){{ old('stop_publishing',\Carbon\Carbon::parse($service->stop_publishing)->format('d-m-Y')) }}@endif" />
                                             <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-calendar"></span>
                                                 </span>

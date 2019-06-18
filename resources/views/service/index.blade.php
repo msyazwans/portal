@@ -8,13 +8,13 @@
                     <div class="row">
                         <div class="col-md-9">
                             <h1>
-                                Articles
+                                Services
                             </h1>
                         </div><!-- col-md-6 close -->
                         <div class="col-md-3 text-right">
                             <ul class="main-action">
                                 <li>
-                                    <a href="/article/new" class="btn-add"><i class="fa fa-plus-circle"></i></a><br>Add Article
+                                    <a href="/service/new" class="btn-add"><i class="fa fa-plus-circle"></i></a><br>Add Service
                                 </li>
                             </ul>
                         </div><!-- col-md-6 close -->
@@ -25,14 +25,15 @@
 
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Articles List
+                        Services List
                     </div><!-- panel-header close -->
                     <div class="panel-body">
-                        <table data-type="articles" data-hospital-id="1" class="sortable table table-striped table-bordered table-hover">
+                        <table data-type="services" data-hospital-id="1" class="sortable table table-striped table-bordered table-hover">
                             <thead>
                             <tr>
                                 <th width="180">Background</th>
                                 <th>Title</th>
+                                <th>Url</th>
                                 <th>Notes</th>
                                 <th width="160">Created</th>
                                 <th width="160">Published</th>
@@ -41,46 +42,49 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($articles as $article)
+                            @foreach($services as $service)
                                 <tr>
                                     <td>
-                                        @if(!empty($article->logo_file_name))
-                                            <img src="/system/article/{{ $article->id }}/thumb/{{ $article->logo_file_name }}?1506548053" alt="">
+                                        @if(!empty($service->featured_file_name))
+                                            <img src="/system/service/{{ $service->id }}/thumb/{{ $service->featured_file_name }}?1506548053" alt="">
                                         @endif
                                     </td>
                                     <td>
-                                        {{ $article->title }}
+                                        {{ $service->title }}
+                                    </td>
+                                     <td>
+                                        {{ $service->url }}
                                     </td>
                                     <td>
-                                        {!! $article->notes !!}
+                                        {!! $service->notes !!}
                                     </td>
                                     <td>
                                         <span class="timestring">
-                                            {{ $article->created_at }}
+                                            {{ $service->created_at }}
                                         </span> <br>
-                                        {{ $article->user->name }}
+                                        {{ $service->user->name }}
                                     </td>
                                     <td>
                                         <span class="timestring">
-                                            {{ $article->start_publishing }}
+                                            {{ $service->start_publishing }}
                                         </span>
                                     </td>
                                     <td>
-                                        @if($article->status == 0)
+                                        @if($service->status == 0)
                                             Draft
-                                        @elseif($article->status == 1)
+                                        @elseif($service->status == 1)
                                             Published
-                                        @elseif($article->status == 2)
+                                        @elseif($service->status == 2)
                                             Archived
                                         @endif
                                     </td>
                                     <td>
-                                        <a class="btn btn-info btn-circle" title="Edit" href="/article/{{ $article->id }}/edit">
+                                        <a class="btn btn-info btn-circle" title="Edit" href="/service/{{ $service->id }}/edit">
                                             <i class="fa fa-edit"></i>
                                         </a>
                                         <a data-confirm="Are you sure?" class="btn btn-danger btn-circle delete "
                                            title="Delete" rel="nofollow" data-method="delete"
-                                           href="/article/{{ $article->id }}/destroy"><i
+                                           href="/service/{{ $service->id }}/destroy"><i
                                                     class="fa fa-trash-o"></i></a>
                                     </td>
                                 </tr>

@@ -17,13 +17,13 @@
                 <a href="/service/list"> Services</a>
             </li>
             <li>
-                <a href="index.html"> Links</a>
+                <a href="/link/list"> Links</a>
             </li>
             <li>
-                <a href="index.html"> Q&A</a>
+                <a href="/question/list"> Q&A</a>
             </li>
             <li>
-                <a href="index.html"> Contact</a>
+                <a href="/caontact/list"> Contact</a>
             </li>
         </ul>
     </div>

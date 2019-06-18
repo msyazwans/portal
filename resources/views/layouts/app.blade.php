@@ -33,9 +33,9 @@
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 
     <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
-    <script type="text/javascript" src="/code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 
-    <script src="../dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="/dist/js/bootstrap-datepicker.min.js"></script>
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -75,6 +75,18 @@
 <!-- Custom Theme JavaScript -->
 <script src="/dist/js/sb-admin-2.js"></script>
 
+<script>
+    var deleteLinks = documentLinks = document.querySelectorAll('.delete');
+    for (var i = 0; i < deleteLinks.length; i++) {
+        deleteLinks[i].addEventListener('click', function (event) {
+            event.preventDefault();
+            var choice = confirm(this.getAttribute('data-confirm'));
+            if (choice) {
+                window.location.href = this.getAttribute('href');
+            }
+        });
+    }
+</script>
 </body>
 
 </html>

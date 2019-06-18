@@ -8,13 +8,13 @@
                     <div class="row">
                         <div class="col-md-9">
                             <h1>
-                                Articles
+                                Links
                             </h1>
                         </div><!-- col-md-6 close -->
                         <div class="col-md-3 text-right">
                             <ul class="main-action">
                                 <li>
-                                    <a href="/article/new" class="btn-add"><i class="fa fa-plus-circle"></i></a><br>Add Article
+                                    <a href="/link/new" class="btn-add"><i class="fa fa-plus-circle"></i></a><br>Add Link
                                 </li>
                             </ul>
                         </div><!-- col-md-6 close -->
@@ -25,15 +25,15 @@
 
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Articles List
+                        Links List
                     </div><!-- panel-header close -->
                     <div class="panel-body">
-                        <table data-type="articles" data-hospital-id="1" class="sortable table table-striped table-bordered table-hover">
+                        <table data-type="links" data-hospital-id="1" class="sortable table table-striped table-bordered table-hover">
                             <thead>
                             <tr>
                                 <th width="180">Background</th>
                                 <th>Title</th>
-                                <th>Notes</th>
+                                <th>Url</th>
                                 <th width="160">Created</th>
                                 <th width="160">Published</th>
                                 <th width="120">Status</th>
@@ -41,46 +41,46 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($articles as $article)
+                            @foreach($links as $link)
                                 <tr>
                                     <td>
-                                        @if(!empty($article->logo_file_name))
-                                            <img src="/system/article/{{ $article->id }}/thumb/{{ $article->logo_file_name }}?1506548053" alt="">
+                                        @if(!empty($link->logo_file_name))
+                                            <img src="/system/link/{{ $link->id }}/thumb/{{ $link->logo_file_name }}?1506548053" alt="">
                                         @endif
                                     </td>
                                     <td>
-                                        {{ $article->title }}
+                                        {{ $link->title }}
                                     </td>
-                                    <td>
-                                        {!! $article->notes !!}
+                                     <td>
+                                        {{ $link->url }}
                                     </td>
                                     <td>
                                         <span class="timestring">
-                                            {{ $article->created_at }}
+                                            {{ $link->created_at }}
                                         </span> <br>
-                                        {{ $article->user->name }}
+                                        {{ $link->user->name }}
                                     </td>
                                     <td>
                                         <span class="timestring">
-                                            {{ $article->start_publishing }}
+                                            {{ $link->start_publishing }}
                                         </span>
                                     </td>
                                     <td>
-                                        @if($article->status == 0)
+                                        @if($link->status == 0)
                                             Draft
-                                        @elseif($article->status == 1)
+                                        @elseif($link->status == 1)
                                             Published
-                                        @elseif($article->status == 2)
+                                        @elseif($link->status == 2)
                                             Archived
                                         @endif
                                     </td>
                                     <td>
-                                        <a class="btn btn-info btn-circle" title="Edit" href="/article/{{ $article->id }}/edit">
+                                        <a class="btn btn-info btn-circle" title="Edit" href="/link/{{ $link->id }}/edit">
                                             <i class="fa fa-edit"></i>
                                         </a>
                                         <a data-confirm="Are you sure?" class="btn btn-danger btn-circle delete "
                                            title="Delete" rel="nofollow" data-method="delete"
-                                           href="/article/{{ $article->id }}/destroy"><i
+                                           href="/link/{{ $link->id }}/destroy"><i
                                                     class="fa fa-trash-o"></i></a>
                                     </td>
                                 </tr>

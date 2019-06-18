@@ -8,13 +8,13 @@
                     <div class="row">
                         <div class="col-md-9">
                             <h1>
-                                Articles
+                                Questions
                             </h1>
                         </div><!-- col-md-6 close -->
                         <div class="col-md-3 text-right">
                             <ul class="main-action">
                                 <li>
-                                    <a href="/article/new" class="btn-add"><i class="fa fa-plus-circle"></i></a><br>Add Article
+                                    <a href="/question/new" class="btn-add"><i class="fa fa-plus-circle"></i></a><br>Add Link
                                 </li>
                             </ul>
                         </div><!-- col-md-6 close -->
@@ -25,13 +25,12 @@
 
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Articles List
+                        Questions List
                     </div><!-- panel-header close -->
                     <div class="panel-body">
-                        <table data-type="articles" data-hospital-id="1" class="sortable table table-striped table-bordered table-hover">
+                        <table data-type="questions" data-hospital-id="1" class="sortable table table-striped table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th width="180">Background</th>
                                 <th>Title</th>
                                 <th>Notes</th>
                                 <th width="160">Created</th>
@@ -41,46 +40,41 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($articles as $article)
+                            @foreach($questions as $question)
                                 <tr>
                                     <td>
-                                        @if(!empty($article->logo_file_name))
-                                            <img src="/system/article/{{ $article->id }}/thumb/{{ $article->logo_file_name }}?1506548053" alt="">
-                                        @endif
+                                        {{ $question->title }}
                                     </td>
-                                    <td>
-                                        {{ $article->title }}
-                                    </td>
-                                    <td>
-                                        {!! $article->notes !!}
+                                     <td>
+                                        {!! $question->notes !!}
                                     </td>
                                     <td>
                                         <span class="timestring">
-                                            {{ $article->created_at }}
+                                            {{ $question->created_at }}
                                         </span> <br>
-                                        {{ $article->user->name }}
+                                        {{ $question->user->name }}
                                     </td>
                                     <td>
                                         <span class="timestring">
-                                            {{ $article->start_publishing }}
+                                            {{ $question->start_publishing }}
                                         </span>
                                     </td>
                                     <td>
-                                        @if($article->status == 0)
+                                        @if($question->status == 0)
                                             Draft
-                                        @elseif($article->status == 1)
+                                        @elseif($question->status == 1)
                                             Published
-                                        @elseif($article->status == 2)
+                                        @elseif($question->status == 2)
                                             Archived
                                         @endif
                                     </td>
                                     <td>
-                                        <a class="btn btn-info btn-circle" title="Edit" href="/article/{{ $article->id }}/edit">
+                                        <a class="btn btn-info btn-circle" title="Edit" href="/question/{{ $question->id }}/edit">
                                             <i class="fa fa-edit"></i>
                                         </a>
                                         <a data-confirm="Are you sure?" class="btn btn-danger btn-circle delete "
                                            title="Delete" rel="nofollow" data-method="delete"
-                                           href="/article/{{ $article->id }}/destroy"><i
+                                           href="/question/{{ $question->id }}/destroy"><i
                                                     class="fa fa-trash-o"></i></a>
                                     </td>
                                 </tr>

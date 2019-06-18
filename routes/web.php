@@ -48,6 +48,38 @@ Route::group(['middleware' => ['role:super']], function () {
     Route::get('/article/{article_id}/destroy','ArticleController@destroy');
     Route::get('/article/{article_id}/remove_photo','ArticleController@remove_photo');
 
+    Route::get('/service/list','ServiceController@index');
+    Route::get('/service/new','ServiceController@create');
+    Route::post('/service/new','ServiceController@store');
+    Route::get('/service/{service_id}/edit','ServiceController@edit');
+    Route::post('/service/{service_id}/edit','ServiceController@update');
+    Route::get('/service/{service_id}/destroy','ServiceController@destroy');
+    Route::get('/service/{service_id}/remove_photo','ServiceController@remove_photo');
+
+    Route::get('/link/list','LinkController@index');
+    Route::get('/link/new','LinkController@create');
+    Route::post('/link/new','LinkController@store');
+    Route::get('/link/{link_id}/edit','LinkController@edit');
+    Route::post('/link/{link_id}/edit','LinkController@update');
+    Route::get('/link/{link_id}/destroy','LinkController@destroy');
+    Route::get('/link/{link_id}/remove_photo','LinkController@remove_photo');
+
+    Route::get('/question/list','QuestionController@index');
+    Route::get('/question/new','QuestionController@create');
+    Route::post('/question/new','QuestionController@store');
+    Route::get('/question/{question_id}/edit','QuestionController@edit');
+    Route::post('/question/{question_id}/edit','QuestionController@update');
+    Route::get('/question/{question_id}/destroy','QuestionController@destroy');
+    Route::get('/question/{question_id}/remove_photo','QuestionController@remove_photo');
+
+    Route::get('/contact/list','ContactController@index');
+    Route::get('/contact/new','ContactController@create');
+    Route::post('/contact/new','ContactController@store');
+    Route::get('/contact/{contact_id}/edit','ContactController@edit');
+    Route::post('/contact/{contact_id}/edit','ContactController@update');
+    Route::get('/contact/{contact_id}/destroy','ContactController@destroy');
+    Route::get('/contact/{contact_id}/remove_photo','ContactController@remove_photo');
+
 });
 
 
