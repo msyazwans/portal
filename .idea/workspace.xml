@@ -2,6 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31380008-b48a-4944-93a8-594a12bf64f6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/link/1/02.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/link/1/medium/02.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/link/1/thumb/02.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/link/2/4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/link/2/medium/4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/link/2/thumb/4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/service/1/004-ferrari-laferrari.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/service/1/medium/004-ferrari-laferrari.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/system/service/1/thumb/004-ferrari-laferrari.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/contact/create.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/contact/edit.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/contact/index.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/link/create.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/link/edit.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/link/index.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/question/create.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/question/edit.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/question/index.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/service/create.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/service/edit.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/service/index.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/LinkController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/LinkController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" />
@@ -48,8 +69,8 @@
       <file leaf-file-name="notes.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/errors/notes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="9" />
+            <state relative-caret-position="357">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -438,12 +459,12 @@
       <workItem from="1560695202511" duration="1032000" />
       <workItem from="1560733143867" duration="1529000" />
       <workItem from="1560821936206" duration="14948000" />
-      <workItem from="1560840803057" duration="651000" />
+      <workItem from="1560840803057" duration="725000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68877000" />
+    <option name="totallyTimeSpent" value="68951000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -857,8 +878,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/errors/notes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="9" />
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="22" />
           <folding />
         </state>
       </provider>
