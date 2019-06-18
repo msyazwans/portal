@@ -32,7 +32,8 @@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <script type="text/javascript" src="/code.jquery.com/jquery-2.1.1.min.js"></script>
 
     <script src="../dist/js/bootstrap-datepicker.min.js"></script>
 

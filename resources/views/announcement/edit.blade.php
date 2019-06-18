@@ -54,7 +54,7 @@
                                         <input class="form-control" type="file" name="announcement_background"
                                                id="announcement_background"/>
                                     </div><!-- panel-heading close -->
-                                    @if (isset($slider->featured_file_name) && !empty($slider->featured_file_name))
+                                    @if (isset($announcement->featured_file_name) && !empty($announcement->featured_file_name))
                                         <div class="panel-body">
                                             <div class="photo_wrap">
                                                 <img src="/system/announcement/{{ $announcement->id }}/medium/{{ $announcement->featured_file_name }}?1506548053"

@@ -14,6 +14,10 @@ git stash
 php artisan cache:clear
 php artisan config:clear
 
+composer require unisharp/laravel-ckeditor
+php artisan vendor:publish
+--kna buat pilihan mana nak publish
+
 git add .
 git commit -m "latest"
 git push -u msyazwans master

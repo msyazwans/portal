@@ -11,10 +11,10 @@
                 <a href="/announcement/list"> Announcements</a>
             </li>
             <li>
-                <a href="index.html"> Articles</a>
+                <a href="/article/list"> Articles</a>
             </li>
             <li>
-                <a href="index.html"> Services</a>
+                <a href="/service/list"> Services</a>
             </li>
             <li>
                 <a href="index.html"> Links</a>

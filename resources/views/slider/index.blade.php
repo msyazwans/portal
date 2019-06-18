@@ -8,7 +8,7 @@
                     <div class="row">
                         <div class="col-md-9">
                             <h1>
-                                Sliders
+                                Announcement
                             </h1>
                         </div><!-- col-md-6 close -->
                         <div class="col-md-3 text-right">
