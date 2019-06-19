@@ -124,6 +124,8 @@
 
   .header_2 .small_widget{float:left;padding-top: 10px; padding-right: 11px; border-right: 1px solid #ddd; padding-left: 11px; padding-bottom: 10px;}
 
+  /*.header_2 .top_small_widget{float:left;padding-top: 10px; padding-right: 11px; border-right: 1px solid #ddd; padding-left: 11px; padding-bottom: 10px;}*/
+
   .header_2 .small_widget a{color:#777;}
 
   .header_2 .small_widget i{padding-right:7px;}
@@ -140,9 +142,35 @@
 
   border-right:1px solid #ddd; height:20px;
 
-
   }
 
+  /*.header_2 .top_nav{height:40px; }*/
+
+  .header_2 .top_nav .top_small_widget{text-shadow:none; color:#777}
+
+  /*.header_2 .top_nav .widget_topnav{border-left:1px solid #ddd !important;}*/
+
+  .header_2 .top_small_widget{float:left;padding-top: 10px; padding-right: 11px; border-right: 1px solid #ddd; padding-left: 11px; padding-bottom: 10px;}
+
+  /*.header_2 .top_small_widget{float:left;padding-top: 10px; padding-right: 11px; border-right: 1px solid #ddd; padding-left: 11px; padding-bottom: 10px;}*/
+
+  .header_2 .top_small_widget a{color:#777;}
+
+  .header_2 .top_small_widget i{padding-right:7px;}
+
+  /*.header_2 .top_nav .top_nav_sub{top:11px; background: #fcfcfc;border: 1px solid #ddd;border-top: none;}*/
+
+  .header_2 .top_small_widget:hover, .header_2 .top_nav .active{box-shadow: inset 1px 0px 24px -1px #f1f1f1;
+
+    -webkit-box-shadow: inset 1px 0px 24px -1px #f1f1f1;
+
+    -moz-box-shadow: inset 1px 0px 24px -1px #f1f1f1;
+
+    -o-box-shadow: inset 1px 0px 24px -1px #f1f1f1;
+
+    border-right:1px solid #ddd; height:20px;
+
+  }
 
   .header_2 .footer_social_icons li , .header_4_right .footer_social_icons li{background-image: url(img/team-about.png) !important; background-repeat:no-repeat !important; }
 
